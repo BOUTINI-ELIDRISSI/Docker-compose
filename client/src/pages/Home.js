@@ -5,7 +5,7 @@ const Home = () => {
   const [users, setUsers] = useState();
   useEffect(() => {
     const fetchUsers = async () => {
-      const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/user`);
+      const res = await fetch(`http://localhost:5000/user`);
       const data = await res.json();
       setUsers(data);
     };
