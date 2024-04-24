@@ -3,12 +3,12 @@ version: '3.8'
 # Services
 services:
   # Server service
-  server:
+  back:
     build:
       context: ./server
       dockerfile: Dockerfile
       
-    container_name: backend
+    container_name: server
     ports:
       - "5000:5000"
     # env_file: ./.env
@@ -27,16 +27,16 @@ services:
       context: ./client
       dockerfile: Dockerfile
 
-    container_name: frontend
+    container_name: react
     ports:
-      - "80:80"
+      - "3000:3000"
     depends_on:
-      - server
+      - back
 
   # Database service
   mongodb:
     image: mongo:latest
-    container_name: mongodb_server
+    container_name: mongodb
 
     # env_file: ./.env
     # environment:
