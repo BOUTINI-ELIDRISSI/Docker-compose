@@ -9,7 +9,7 @@ dotenv.config();
 
 // Connect DB
 mongoose
-  .connect("mongodb://host.docker.iternal:27017/testdb",{ 
+  .connect("mongodb://host.docker.internal:27017/testdb",{ 
     useNewUrlParser: true, 
     useUnifiedTopology: true ,
     family: 4 
