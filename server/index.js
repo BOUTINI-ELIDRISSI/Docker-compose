@@ -7,7 +7,6 @@ const cors = require("cors");
 dotenv.config();
 
 
-const  x = 0;
 // Connect DB
 mongoose
   .connect("mongodb://host.docker.iternal:27017/testdb",{ 
